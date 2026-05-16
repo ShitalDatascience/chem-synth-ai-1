@@ -27,9 +27,7 @@ Modern **FastAPI · Next.js · PostgreSQL · RAG · LangChain · Ollama · ChemL
 
 ## See it in action
 
-<video src="./ChemSynthAi.mp4" controls width="100%">
-  <a href="./ChemSynthAi.mp4">Download the ChemSynth AI demo video</a>
-</video>
+<video src="ChemSynthAi.mp4" controls width="100%"></video>
 
 **Live:** [chemsynthai.com/chat](https://chemsynthai.com/chat) · **API docs:** [api.chemsynthai.com/docs](https://api.chemsynthai.com/docs)
 
