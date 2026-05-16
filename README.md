@@ -1,3 +1,7 @@
+
+
+
+
 <div align="center">
 
 # ChemSynth AI — Analysis Agent
@@ -27,7 +31,8 @@ Modern **FastAPI · Next.js · PostgreSQL · RAG · LangChain · Ollama · ChemL
 
 ## See it in action
 
-<video src="ChemSynthAi.mp4" controls width="100%"></video>
+[<video src="ChemSynthAi.mp4" controls width="100%"></video>](https://github.com/user-attachments/assets/0ed0c598-c699-4ab9-bb20-8ae519f128ed)
+
 
 **Live:** [chemsynthai.com/chat](https://chemsynthai.com/chat) · **API docs:** [api.chemsynthai.com/docs](https://api.chemsynthai.com/docs)
 
