@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Design tokens — values taken verbatim from the Stitch export's tailwind.config
+   (stitch_drug_discovery_research_agent/discovery_chat/code.html)
+───────────────────────────────────────────────────────────────────────────── */
+@theme inline {
+  /* ── Surfaces ── */
+  --color-background:                 #f8f9ff;
+  --color-on-background:              #0b1c30;
+  --color-surface:                    #f8f9ff;
+  --color-surface-bright:             #f8f9ff;
+  --color-surface-dim:                #cbdbf5;
+  --color-surface-variant:            #d3e4fe;
+  --color-surface-tint:               #565e74;
+  --color-surface-container-lowest:   #ffffff;
+  --color-surface-container-low:      #eff4ff;
+  --color-surface-container:          #e5eeff;
+  --color-surface-container-high:     #dce9ff;
+  --color-surface-container-highest:  #d3e4fe;
+  --color-on-surface:                 #0b1c30;
+  --color-on-surface-variant:         #45464d;
+  --color-inverse-surface:            #213145;
+  --color-inverse-on-surface:         #eaf1ff;
+
+  /* ── Borders ── */
+  --color-outline:                    #76777d;
+  --color-outline-variant:            #c6c6cd;
+
+  /* ── Primary (black / dark) ── */
+  --color-primary:                    #000000;
+  --color-on-primary:                 #ffffff;
+  --color-primary-container:          #131b2e;
+  --color-on-primary-container:       #7c839b;
+  --color-primary-fixed:              #dae2fd;
+  --color-primary-fixed-dim:          #bec6e0;
+  --color-on-primary-fixed:           #131b2e;
+  --color-on-primary-fixed-variant:   #3f465c;
+  --color-inverse-primary:            #bec6e0;
+
+  /* ── Secondary (blue link / accent) ── */
+  --color-secondary:                  #006591;
+  --color-on-secondary:               #ffffff;
+  --color-secondary-container:        #39b8fd;
+  --color-on-secondary-container:     #004666;
+  --color-secondary-fixed:            #c9e6ff;
+  --color-secondary-fixed-dim:        #89ceff;
+  --color-on-secondary-fixed:         #001e2f;
+  --color-on-secondary-fixed-variant: #004c6e;
+
+  /* ── Tertiary (green badges / accents) ── */
+  --color-tertiary:                   #000000;
+  --color-on-tertiary:                #ffffff;
+  --color-tertiary-container:         #002113;
+  --color-on-tertiary-container:      #009668;
+  --color-tertiary-fixed:             #6ffbbe;
+  --color-tertiary-fixed-dim:         #4edea3;
+  --color-on-tertiary-fixed:          #002113;
+  --color-on-tertiary-fixed-variant:  #005236;
+
+  /* ── Error ── */
+  --color-error:                      #ba1a1a;
+  --color-on-error:                   #ffffff;
+  --color-error-container:            #ffdad6;
+  --color-on-error-container:         #93000a;
+
+  /* ── Typography — families ── */
+  --font-display-lg:   var(--font-inter), Inter, system-ui, sans-serif;
+  --font-headline-md:  var(--font-inter), Inter, system-ui, sans-serif;
+  --font-body-md:      var(--font-inter), Inter, system-ui, sans-serif;
+  --font-label-caps:   var(--font-inter), Inter, system-ui, sans-serif;
+  --font-data-mono:    var(--font-space-grotesk), "Space Grotesk", ui-monospace, monospace;
+
+  /* ── Typography — sizes (Tailwind v4 multi-value token syntax) ── */
+  --text-display-lg:                   30px;
+  --text-display-lg--line-height:      38px;
+  --text-display-lg--letter-spacing:  -0.02em;
+  --text-display-lg--font-weight:      600;
+
+  --text-headline-md:                  20px;
+  --text-headline-md--line-height:     28px;
+  --text-headline-md--font-weight:     600;
+
+  --text-body-md:                      14px;
+  --text-body-md--line-height:         20px;
+  --text-body-md--font-weight:         400;
+
+  --text-label-caps:                   11px;
+  --text-label-caps--line-height:      16px;
+  --text-label-caps--letter-spacing:   0.05em;
+  --text-label-caps--font-weight:      700;
+
+  --text-data-mono:                    13px;
+  --text-data-mono--line-height:       16px;
+  --text-data-mono--letter-spacing:    0.02em;
+  --text-data-mono--font-weight:       500;
+
+  /* ── Border radii (Stitch export values) ── */
+  --radius-DEFAULT:  0.125rem;   /* 2px  */
+  --radius-lg:       0.25rem;    /* 4px  */
+  --radius-xl:       0.5rem;     /* 8px  */
+  --radius-full:     0.75rem;    /* 12px */
+
+  /* ── Spacing ── */
+  --spacing-gutter:  16px;
+  --spacing-margin:  24px;
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────────────── */
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+}
+
+/* ─── Material Symbols ───────────────────────────────────────────────────────── */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.material-symbols-outlined[data-weight="fill"] {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* ─── Login grid background ──────────────────────────────────────────────────── */
+.grid-pattern {
+  background-color: #eef1f8;
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right,  rgba(180, 188, 210, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(180, 188, 210, 0.35) 1px, transparent 1px);
+}

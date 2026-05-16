@@ -1,0 +1,49 @@
+{
+  "query": "aspirin",
+  "evidence_summary": {
+    "top_targets": [
+      {
+        "target": "COX-1",
+        "count": 86
+      },
+      {
+        "target": "COX-2",
+        "count": 64
+      },
+      {
+        "target": "Alpha-1A adrenergic receptor",
+        "count": 8
+      }
+    ],
+    "potency_stats_by_target": [
+      {
+        "target": "COX-1",
+        "activity_type": "IC50",
+        "median_value": 350,
+        "min_value": 300,
+        "max_value": 29300,
+        "unit": "nM",
+        "sample_size": 34
+      },
+      {
+        "target": "COX-2",
+        "activity_type": "IC50",
+        "median_value": 2400,
+        "min_value": 2400,
+        "max_value": 2595,
+        "unit": "nM",
+        "sample_size": 28
+      }
+    ],
+    "cell_line_activity": [
+      {
+        "target": "RPMI-8226",
+        "count": 12
+      },
+      {
+        "target": "HT-29",
+        "count": 10
+      }
+    ]
+  }
+}

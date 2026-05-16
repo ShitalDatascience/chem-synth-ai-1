@@ -1,0 +1,87 @@
+{
+  "query": "aspirin report",
+  "report_id": "golden-aspirin",
+  "molecule_data": {
+    "chembl_id": "CHEMBL25",
+    "pref_name": "ASPIRIN",
+    "canonical_smiles": "CC(=O)Oc1ccccc1C(=O)O",
+    "mw": 180.16,
+    "logp": 1.19
+  },
+  "evidence_summary": {
+    "summary_text": "Aspirin demonstrates strong historical COX-1 and COX-2 engagement supported by extensive ChEMBL bioactivity evidence. Potency trends suggest meaningfully differentiated engagement across isoforms under typical biochemical assay formats.",
+    "top_targets": [
+      {"target": "Prostaglandin G/H synthase 1"},
+      {"target": "Prostaglandin G/H synthase 2"}
+    ],
+    "total_activities": 450,
+    "potency_stats_by_target": [],
+    "assay_counts": {"IC50": 120, "Ki": 40},
+    "cell_line_activity": [],
+    "target_clusters": []
+  },
+  "predictions": [
+    {
+      "task": "solubility",
+      "label": "Solubility",
+      "value": 0.837,
+      "probability": 0.71,
+      "uncertainty": null,
+      "unit": "",
+      "model_name": "chemprop_surrogate",
+      "training_dataset": "internal_v1"
+    },
+    {
+      "task": "toxicity",
+      "label": "Toxicity",
+      "value": 0.41,
+      "probability": 0.62,
+      "uncertainty": null,
+      "unit": "",
+      "model_name": "tox21_style",
+      "training_dataset": "internal_v1"
+    },
+    {
+      "task": "predicted_activity",
+      "label": "Bioactivity",
+      "value": 0.72,
+      "probability": 0.68,
+      "uncertainty": null,
+      "unit": "",
+      "model_name": "pcba_surrogate",
+      "training_dataset": "internal_v1"
+    }
+  ],
+  "report_sections": {
+    "executive_summary": "",
+    "molecular_identity": "ASPIRIN",
+    "physchem": "MW 180 | LogP 1.2",
+    "chembl_evidence": "Aspirin shows broad COX-related activity records in this ChEMBL slice.",
+    "predictions": "",
+    "risks": "Standard NSAID class considerations apply.",
+    "next_experiments": "Validate potency trends with orthogonal enzymatic readouts.",
+    "citations": "ChEMBL",
+    "disclaimer": "For research use only."
+  },
+  "similar_compounds": [
+    {
+      "chembl_id": "CHEMBL1234",
+      "tanimoto": 0.42,
+      "pref_name": "Salicylic acid",
+      "canonical_smiles": null,
+      "headline_activity": null
+    }
+  ],
+  "experiment_list": [
+    {
+      "target": "COX-1",
+      "recommended_assay": "enzymatic IC50 under standardized PGH2 conditions",
+      "priority": "high"
+    },
+    {
+      "target": "COX-2",
+      "recommended_assay": "selectivity profiling against matched COX-1 controls",
+      "priority": "high"
+    }
+  ]
+}

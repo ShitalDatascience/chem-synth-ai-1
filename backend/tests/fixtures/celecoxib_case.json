@@ -1,0 +1,40 @@
+{
+  "query": "celecoxib",
+  "report_id": "golden-celecoxib",
+  "molecule_data": {
+    "chembl_id": "CHEMBL139",
+    "pref_name": "CELECOXIB",
+    "canonical_smiles": "O=S(=O)(Nc1ccc(cc1)C(F)(F)F)c2ccccc2",
+    "mw": 381.37,
+    "logp": 3.04
+  },
+  "evidence_summary": {
+    "summary_text": "Celecoxib exemplifies COX-2-biased inhibition with a diarylheterocycle sulfonamide pharmacophore; cardiovascular surveillance remains class-relevant for long-term exposure.",
+    "top_targets": [{"target": "Prostaglandin G/H synthase 2"}],
+    "total_activities": 220,
+    "potency_stats_by_target": [],
+    "assay_counts": {},
+    "cell_line_activity": [],
+    "target_clusters": []
+  },
+  "predictions": [
+    {"task": "solubility", "label": "Sol", "value": 0.39, "probability": 0.6, "uncertainty": null, "unit": "", "model_name": "m1", "training_dataset": "td"},
+    {"task": "toxicity", "label": "Tox", "value": 0.48, "probability": null, "uncertainty": null, "unit": "", "model_name": "m2", "training_dataset": "td"},
+    {"task": "predicted_activity", "label": "Act", "value": 0.69, "probability": null, "uncertainty": null, "unit": "", "model_name": "m3", "training_dataset": "td"}
+  ],
+  "report_sections": {
+    "executive_summary": "",
+    "molecular_identity": "CELECOXIB",
+    "physchem": "",
+    "chembl_evidence": "Celecoxib retains a selective COX-2 footprint in public potency summaries.",
+    "predictions": "",
+    "risks": "",
+    "next_experiments": "Add cardiovascular biomarker readouts for chronic-use analogs.",
+    "citations": "ChEMBL",
+    "disclaimer": "For research use only."
+  },
+  "similar_compounds": [],
+  "experiment_list": [
+    {"target": "COX-2", "recommended_assay": "cardiovascular risk biomarker panel", "priority": "high"}
+  ]
+}

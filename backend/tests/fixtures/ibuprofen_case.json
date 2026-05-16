@@ -1,0 +1,40 @@
+{
+  "query": "ibuprofen",
+  "report_id": "golden-ibuprofen",
+  "molecule_data": {
+    "chembl_id": "CHEMBL521",
+    "pref_name": "IBUPROFEN",
+    "canonical_smiles": "CC(C)Cc1ccc(C(C)C(=O)O)cc1",
+    "mw": 206.28,
+    "logp": 3.97
+  },
+  "evidence_summary": {
+    "summary_text": "Ibuprofen is a classic arylpropionic acid NSAID with reversible COX inhibition and extensive public-domain potency records.",
+    "top_targets": [{"target": "Prostaglandin G/H synthase 2"}, {"target": "Prostaglandin G/H synthase 1"}],
+    "total_activities": 310,
+    "potency_stats_by_target": [],
+    "assay_counts": {},
+    "cell_line_activity": [],
+    "target_clusters": []
+  },
+  "predictions": [
+    {"task": "solubility", "label": "Sol", "value": 0.52, "probability": 0.65, "uncertainty": null, "unit": "", "model_name": "m1", "training_dataset": "td"},
+    {"task": "toxicity", "label": "Tox", "value": 0.36, "probability": null, "uncertainty": null, "unit": "", "model_name": "m2", "training_dataset": "td"},
+    {"task": "predicted_activity", "label": "Act", "value": 0.61, "probability": null, "uncertainty": null, "unit": "", "model_name": "m3", "training_dataset": "td"}
+  ],
+  "report_sections": {
+    "executive_summary": "",
+    "molecular_identity": "IBUPROFEN",
+    "physchem": "",
+    "chembl_evidence": "Ibuprofen retains a dense COX-related activity footprint in ChEMBL.",
+    "predictions": "",
+    "risks": "",
+    "next_experiments": "Confirm potency on COX isoforms with standardized nM endpoints.",
+    "citations": "ChEMBL",
+    "disclaimer": "For research use only."
+  },
+  "similar_compounds": [],
+  "experiment_list": [
+    {"target": "COX-2", "recommended_assay": "IC50 panel with human protein", "priority": "high"}
+  ]
+}

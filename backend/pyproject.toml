@@ -1,0 +1,96 @@
+[project]
+name = "cheminsight-backend"
+version = "0.1.0"
+description = "FastAPI backend for ChemSynth AI discovery agent"
+requires-python = ">=3.10"
+dependencies = [
+  # Web framework
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+  "pydantic>=2.8.0",
+  "python-dotenv>=1.0.1",
+  "httpx>=0.27.0",
+
+  # Postgres / ChEMBL (Milestone 1)
+  "psycopg[binary]>=3.2.0",
+  "pandas>=2.0.0",
+  "numpy>=1.24.0",
+
+  # Chemistry (Milestone 2) — install after scaffold
+  # Uncomment when ready:
+  # "rdkit-pypi>=2022.9.5",   # or "rdkit>=2023.9.1" if rdkit-pypi unavailable
+  # "pymilvus>=2.4.0",        # Milvus Lite embedded in pymilvus >=2.4
+
+  # LangChain agent (Milestone 3)
+  # Uncomment when ready:
+  # "langchain>=0.3.0",
+  # "langchain-ollama>=0.2.0",
+  # "langchain-core>=0.3.0",
+
+  # DeepChem + PyTorch (Milestone 4) — install after Milestone 3 is stable
+  # Uncomment when ready (Apple Silicon: use torch from pytorch.org/get-started/locally):
+  # "deepchem>=2.8.0",
+  # "torch>=2.3.0",
+]
+
+[project.optional-dependencies]
+chemistry = [
+  "rdkit-pypi>=2022.9.5",
+  "pymilvus>=2.4.0",
+]
+llm = [
+  "langchain>=0.3.0",
+  "langchain-ollama>=0.2.0",
+  "langchain-core>=0.3.0",
+]
+ml = [
+  "deepchem>=2.8.0",
+  "torch>=2.3.0",
+]
+# LoRA report narrative (CPU-safe; optional — install: pip install ".[lora]")
+lora = [
+  "torch>=2.3.0",
+  "transformers>=4.40.0",
+  "peft>=0.10.0",
+  "accelerate>=0.29.0",
+  "sentencepiece>=0.2.0",
+  "safetensors>=0.4.0",
+]
+all = [
+  "rdkit-pypi>=2022.9.5",
+  "pymilvus>=2.4.0",
+  "langchain>=0.3.0",
+  "langchain-ollama>=0.2.0",
+  "langchain-core>=0.3.0",
+  "deepchem>=2.8.0",
+  "torch>=2.3.0",
+  "transformers>=4.40.0",
+  "peft>=0.10.0",
+  "accelerate>=0.29.0",
+  "sentencepiece>=0.2.0",
+  "safetensors>=0.4.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+  "ruff>=0.6.0",
+  "pytest>=8.0.0",
+  "pytest-asyncio>=0.23.0",
+  "httpx>=0.27.0",
+]
+
+
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+exclude = ["data*", "tests*", "scripts*"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]

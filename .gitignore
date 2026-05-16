@@ -1,0 +1,88 @@
+.DS_Store
+Thumbs.db
+
+# Dependencies & JS build
+node_modules/
+.next/
+out/
+dist/
+build/
+
+# Env & secrets
+.env*
+!.env.example
+
+# Cursor IDE (local agent state — do not commit)
+.cursor/
+
+# Local schema dump & planning docs (not tracked)
+specific_schema.sql
+cheminsight_rag_agent_81b53ca8.structured_for_cursor.plan.md
+cheminsight_rag_agent_81b53ca8.plan.md
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Testing / coverage / linters
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Logs & temp
+*.log
+tmp/
+temp/
+.cache/
+
+# --- Local databases & runtime data (code only in git) ---
+
+# PostgreSQL install / cluster data (Homebrew, manual, or vendored)
+postgres/
+postgresql/
+pgsql/
+pgdata/
+**/pgdata/
+**/postgresql/data/
+
+# ChEMBL / Postgres dumps & backups (large; load locally)
+*.dump
+*.sql.gz
+*.backup
+chembl_*.sql
+chembl_*.dump
+
+# Milvus / Milvus Lite install trees and embedded DB
+milvus/
+milvus-lite/
+**/milvus_lite.db
+**/.milvus_lite.db.lock
+**/milvus_ingest_checkpoint.json
+*.milvus.db
+
+# App-local data dir (Milvus file, DeepChem cache, exports, checkpoints)
+backend/data/*
+data/*
+!backend/data/.gitkeep
+
+# DeepChem / ML caches and local model weights
+**/deepchem_cache/
+backend/model/
+
+# Large local media & design exports (not application source)
+*.mp4
+stitch_drug_discovery_research_agent/
+stitch_drug_discovery_research_agent (1)/

@@ -1,0 +1,40 @@
+{
+  "query": "paracetamol",
+  "report_id": "golden-paracetamol",
+  "molecule_data": {
+    "chembl_id": "CHEMBL112",
+    "pref_name": "PARACETAMOL",
+    "canonical_smiles": "CC(=O)Nc1ccc(O)cc1",
+    "mw": 151.16,
+    "logp": 0.46
+  },
+  "evidence_summary": {
+    "summary_text": "Paracetamol shows a distinct analgesic profile with weaker classical peripheral COX inhibition in many assays; hepatocyte liability scales with dose and reactive metabolite burden.",
+    "top_targets": [{"target": "Prostaglandin G/H synthase 2"}],
+    "total_activities": 180,
+    "potency_stats_by_target": [],
+    "assay_counts": {},
+    "cell_line_activity": [],
+    "target_clusters": []
+  },
+  "predictions": [
+    {"task": "solubility", "label": "Sol", "value": 0.68, "probability": 0.7, "uncertainty": null, "unit": "", "model_name": "m1", "training_dataset": "td"},
+    {"task": "toxicity", "label": "Tox", "value": 0.55, "probability": null, "uncertainty": null, "unit": "", "model_name": "m2", "training_dataset": "td"},
+    {"task": "predicted_activity", "label": "Act", "value": 0.44, "probability": null, "uncertainty": null, "unit": "", "model_name": "m3", "training_dataset": "td"}
+  ],
+  "report_sections": {
+    "executive_summary": "",
+    "molecular_identity": "PARACETAMOL",
+    "physchem": "",
+    "chembl_evidence": "Paracetamol evidence concentrates on COX-2 and central mechanisms in curated records.",
+    "predictions": "",
+    "risks": "",
+    "next_experiments": "Prioritize hepatocyte safety margin studies for close analogs.",
+    "citations": "ChEMBL",
+    "disclaimer": "For research use only."
+  },
+  "similar_compounds": [],
+  "experiment_list": [
+    {"target": "COX-2", "recommended_assay": "hepatocyte repeat-dose tox panel", "priority": "medium"}
+  ]
+}

@@ -1,0 +1,14 @@
+
+===== EXECUTIVE =====
+
+Aspirin demonstrates strong historical COX-1 and COX-2 engagement supported by extensive ChEMBL bioactivity evidence. Potency trends suggest meaningfully differentiated engagement across isoforms under typical biochemical assay formats. Integrated activity models support a comparatively strong predicted bioactivity signal for the queried scaffold. Model outputs suggest favorable solubility characteristics, while moderate predicted toxicity within the evaluated surrogate panel. A practical next step is prioritized confirmatory profiling on COX-1. ASPIRIN likely acts via cyclooxygenase inhibition (COX-1/COX-2 pathway modulation), consistent with NSAID pharmacology. Structure-activity context includes close analogs such as CHEMBL1234 (Tanimoto 0.42), supporting scaffold-level comparison.
+
+===== PREDICTIONS =====
+
+Integrated activity models support a comparatively strong predicted bioactivity signal for the queried scaffold. Model outputs suggest favorable solubility characteristics, while moderate predicted toxicity within the evaluated surrogate panel.
+
+===== NEXT EXPERIMENTS =====
+
+Validate potency trends with orthogonal enzymatic readouts.
+• Confirmatory enzymatic IC50 under standardized PGH2 conditions on COX-1 (high priority).
+• Selectivity profiling against matched COX-1 controls on COX-2 (high priority).

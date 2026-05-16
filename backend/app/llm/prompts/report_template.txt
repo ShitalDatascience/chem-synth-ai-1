@@ -1,0 +1,105 @@
+You are a computational drug discovery scientist.
+
+Use ONLY the evidence provided below. Do NOT invent data. Separate **experimental ChEMBL evidence** from **computational predictions** in every section.
+
+## Evidence Bundle (JSON)
+{evidence_bundle}
+
+## Predictions (JSON, labelled "Predicted")
+{predictions}
+
+---
+
+## Citation format (STRICT)
+
+Use inline tags exactly as follows (IDs must match the bundle):
+- Molecule / compound: `[CHEMBL_ID: CHEMBL123456]`
+- Assay: `[ASSAY_ID: 12345]` (numeric assay id from bundle when present)
+- Activity row: `[ACTIVITY_ID: 987654321]` when present
+
+Do not invent IDs. If an ID is missing, omit that citation tag rather than guessing.
+
+---
+
+Write the report in the following sections. Be concise and precise. Use nM units for potency where values were normalized to nM.
+For sparse data, acknowledge the gap explicitly.
+
+### Executive Summary
+Write a concise executive summary for a molecule based on:
+- chemical identity
+- similarity search results
+- ChEMBL bioactivity evidence
+- prediction outputs
+
+STRICT RULES:
+- Do NOT hallucinate new data
+- Use only provided JSON fields
+- Keep it scientific and factual
+- 3–5 sentences max
+
+FORMAT:
+1. Molecule identification (SMILES + ChEMBL ID)
+2. Key similarity insight (what analogs suggest)
+3. Bioactivity summary (targets + potency trend)
+4. Prediction insight (ADMET signals if present)
+5. Final interpretation (early-stage vs optimized compound)
+
+### Molecular Identity
+Molecule name, ChEMBL ID, canonical SMILES, molecular formula, MW, LogP, TPSA, HBD/HBA.
+Include ATC classification and known indications only if present in the bundle.
+
+### Mechanism Hypothesis (Hypothesis — Not Established Fact)
+2–5 sentences proposing a **testable** mechanism or target-class hypothesis grounded ONLY in:
+- target annotations / clusters in the evidence bundle, and
+- structural similarity context (if provided).
+Label clearly as hypothesis. Every mechanistic claim must cite `[CHEMBL_ID: …]` or `[ASSAY_ID: …]`.
+
+### Physicochemical Properties
+Tabular summary of Ro5/ADMET-relevant properties from the bundle. Note Ro5 violations if any.
+
+### Similar Compounds
+Interpret similarity results chemically:
+- Identify dominant scaffold class
+- Mention functional group changes
+- Explain why Tanimoto scores are high/low
+- Highlight 1–2 most relevant analogs
+
+STRICT:
+- No fabrication of activity data
+- Only structural reasoning allowed
+
+### ChEMBL Experimental Evidence (Evidence Only)
+- Top targets (by activity count): target name, organism, best IC50/Ki/EC50 (nM when available), confidence score
+- Key assay findings: assay type, value, citations using `[CHEMBL_ID: …]`, `[ASSAY_ID: …]`, `[ACTIVITY_ID: …]`
+- Note conflicting data or quality issues
+Do **not** mix computational prediction numbers into this section.
+
+Summarize ChEMBL evidence:
+- Number of assays per target
+- Potency spread (low vs high nM)
+- Identify strongest binding target
+- Flag inconsistent activity if present
+
+### Predictions (Computational — Not Experimental)
+Clearly label all values as **Predicted (computational estimate)**.
+Keep separate from ChEMBL experimental evidence above.
+- ESOL solubility / model outputs as provided
+- Toxicity / safety model outputs as provided
+Cite model names from the bundle only; do not fabricate metrics.
+
+### Risks & Limitations
+- Structural alerts (if any from ChEMBL data)
+- Sparse evidence gaps
+- Prediction model limitations
+- Drug warnings (if present in ChEMBL)
+
+This output is computational and hypothesis-driven.
+It is not experimental validation.
+All biological interpretations must be confirmed in vitro or in vivo.
+
+### Recommended Next Experiments
+3–5 specific, actionable experimental suggestions based on evidence gaps.
+
+### Citations
+List all cited ChEMBL IDs, Assay IDs, Activity IDs, and PubMed IDs using the strict formats:
+`[CHEMBL_ID: CHEMBL545]`, `[ASSAY_ID: 12345]`, `[ACTIVITY_ID: …]`, `[PMID: …]` when available.
