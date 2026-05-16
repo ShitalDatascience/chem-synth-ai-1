@@ -84,5 +84,6 @@ backend/model/
 
 # Large local media & design exports (not application source)
 *.mp4
+!ChemSynthAi.mp4
 stitch_drug_discovery_research_agent/
 stitch_drug_discovery_research_agent (1)/
