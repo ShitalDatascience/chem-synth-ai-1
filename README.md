@@ -4,7 +4,7 @@
 
 <div align="center">
 
-# ChemSynth AI — Analysis Agent
+# ChemSynth AI — Drug Analysis Agent
 
 **Agentic RAG for drug analysis** — **retrieval-augmented** pipelines over **ChEMBL** + **Milvus** (indexed with **RDKit Morgan fingerprints**, radius **2**, **2048** bits), **DeepChem** predictions, and **ChemLLM** (**LangChain** + **Ollama**) with typed JSON responses behind guardrails and routing.
 
